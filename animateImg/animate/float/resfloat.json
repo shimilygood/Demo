@@ -1,0 +1,28 @@
+{
+	"groups":[{
+			"keys":"bd1_png,bd2_png,bd3_png,bd4_png",
+			"name":"float"
+		}],
+	"resources":[
+		{
+			"name":"bd1_png",
+			"type":"image",
+			"url":"D:/project/Demo/animate/images/float/bd1.png"
+		},
+		{
+			"name":"bd2_png",
+			"type":"image",
+			"url":"D:/project/Demo/animate/images/float/bd2.png"
+		},
+		{
+			"name":"bd3_png",
+			"type":"image",
+			"url":"D:/project/Demo/animate/images/float/bd3.png"
+		},
+		{
+			"name":"bd4_png",
+			"type":"image",
+			"url":"D:/project/Demo/animate/images/float/bd4.png"
+		}
+	]
+}

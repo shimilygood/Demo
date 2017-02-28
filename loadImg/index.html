@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片预加载</title>
+</head>
+<body>
+<div class="loading" id="js_loading">
+    <div class="loadingImg">
+        <img src="images/cake-1.jpg"/>
+    </div>
+    <div class="percent" id="js_speed">0%</div>
+</div>
+<div id="container">
+	<img  data-src="images/cake-1.png" height="358" width="444"/>
+	<img  data-src="images/cake-2.png" height="358" width="444"/>
+	<img  data-src="images/cake-3.png" height="358" width="444"/>
+	<img  data-src="images/cake-4.png" height="358" width="444"/>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/loadImg.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

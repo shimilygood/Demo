@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textureMerger动画制作</title>
+</head>
+<body>
+	
+<div id="anim_float"></div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="MovieClip/ec_main.js"></script>
+<script>
+$(function(){
+	//图片配置
+	var config = {
+		"bd4":{"x":131,"y":0,"w":129,"h":264,"offX":0,"offY":0,"sourceW":129,"sourceH":264,duration:3},
+		"bd1":{"x":0,"y":532,"w":129,"h":264,"offX":0,"offY":0,"sourceW":129,"sourceH":264,duration:3},
+		"bd2":{"x":0,"y":266,"w":129,"h":264,"offX":0,"offY":0,"sourceW":129,"sourceH":264,duration:3},
+		"bd3":{"x":0,"y":0,"w":129,"h":264,"offX":0,"offY":0,"sourceW":129,"sourceH":264,duration:3}
+	};
+	// MovieClip  可以通过duration控制两张图片轮播的速度。
+    new MovieClip("images/float.png", config, 'mc', 'anim_float').gotoAndPlay(1,-1);
+
+})
+	
+/*逐帧动画制作方法
+	1.通过textureMerger导出合成的图片和对应的json
+	2.引入MovieClip库文件
+	3.设置动画节点<div id="anim_float"></div>
+	4.把json里的数据携程js对象格式    {duration:3两张图片的间隔时间。如果是从psd里面看到的是0.2，此处应该写0.2*20=4，写为4
+	5.new一个对象
+	new MovieClip("图片路径", 图片配置, 'mc', '节点').gotoAndPlay(1,-1);    //-1循环播放    1，2，3播放次数
+*/
+</script>
+</body>
+</html>

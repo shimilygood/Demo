@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="section banner">
+    <img  data-src="images/cake-1.png" height="358" width="444"/>
+    <img  data-src="images/cake-2.png" height="358" width="444"/>
+    <img  data-src="images/cake-3.png" height="358" width="444"/>
+    <img  data-src="images/cake-4.png" height="358" width="444"/>
+    <p><a href="#"></a></p>
+    <p><a href="#"></a></p>
+    <div class="gobuy"><a href="#"></a></div>
+    <div class="gobuy"><a href="#"></a></div>
+</div>
+
+<script>
+    $(function(){
+        function loadImg(){
+            var $elImg = $('.section').find("img"),
+                len = $elImg.length,
+                count = 0;
+            console.log(len)
+
+            for(var i = 0; i < len; i++){
+                (function(i){
+                    var img = new Image(),
+                        url = $elImg.eq(i).data('src');
+
+                    if(!url) {
+                        return;
+                    }
+                    img.src = url;
+                    if(img.complete){
+                        count++;
+
+                        $elImg.eq(i).attr('src', url);
+                        if(count == len){  //加载完成
+                            animations();
+                        }
+                    } else {
+                        img.onload = function(){
+                            count++;
+                            $elImg.eq(i).attr('src', url);
+                            if(count == len){ //加载完成
+                                animations();
+
+                            }
+                        }
+                    }
+                })(i);
+            }
+        }
+        loadImg();
+    });
+
+    function animations(){
+        alert("图片加载完成！")
+    }
+</script>
+
+</body>
+</html>

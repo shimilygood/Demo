@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textureMerger动画制作及预加载</title>
+</head>
+<body>
+<div id="evt_spin">0%</div>
+<div id="anim_float"></div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="MovieClip/ec_main.js"></script>
+<script>
+$(function(){
+	//图片配置
+		var config = {
+			"bd2":{duration:3},
+			"bd3":{duration:3},
+			"bd4":{duration:3},
+			"bd5":{duration:3},
+			"bd6":{duration:3},
+			"bd7":{duration:3},
+			"bd8":{duration:3},
+			"bd9":{duration:3},
+			"bd10":{duration:3},
+			"bd11":{duration:3},
+			"bd12":{duration:3},
+			"bd13":{duration:3},
+			"bd14":{duration:3},
+			"bd15":{duration:3},
+			"bd16":{duration:3},
+			"bd17":{duration:3},
+			"bd18":{duration:3}
+		};
+		// MovieClip    图片比较多的时候，使用数组的方式，进行img里的src替换。可以通过duration控制两张图片轮播的速度。
+	    new MovieClip(['images/dance/d2.png','images/dance/d3.png','images/dance/d4.png','images/dance/d5.png','images/dance/d6.png','images/dance/d7.png','images/dance/d8.png','images/dance/d9.png','images/dance/d10.png','images/dance/d11.png','images/dance/d12.png','images/dance/d13.png','images/dance/d14.png','images/dance/d15.png','images/dance/d16.png','images/dance/d17.png','images/dance/d18.png'], config, 'mc', 'anim_float').gotoAndPlay(1,-1);
+})
+	
+/*逐帧动画制作方法
+	1.通过textureMerger导出合成的图片和对应的json
+	2.引入MovieClip库文件
+	3.设置动画节点<div id="anim_float"></div>
+	4.把json里的数据携程js对象格式   {duration:3两张图片的间隔时间。如果是从psd里面看到的是0.2，此处应该写0.2*20=4，写为4
+	5.new一个对象
+	new MovieClip("图片路径", 图片配置, 'mc', '节点').gotoAndPlay(1,-1);    //-1循环播放    1，2，3播放次数
+	 new MovieClip("d[2-18]_png", config, 'mc', 'anim_float').gotoAndPlay(1,-1);   //图片较多的情况下，可以使用图片路径替换的方法
+*/
+</script>
+</body>
+</html>

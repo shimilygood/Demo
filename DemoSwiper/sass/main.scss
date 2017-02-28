@@ -1,0 +1,66 @@
+
+.evt-container{
+  /* addon css code goes here */
+
+
+  .section-banner{
+    height:580px;
+    text-align: center;
+    background: url("../images/banner-bg.jpg");
+    .item{
+      position: absolute;
+      top:66px;
+      left: 130px;
+    }
+  }
+
+  .section-main{
+    height: 1000px;
+    background: url("../images/bg.jpg") repeat;
+    .item{ position: absolute}
+    .cake{
+      top: -20px;
+      left: -10px;
+    }
+    .w1{
+      top: 80px;
+      left: 530px;
+    }
+  }
+  //图片轮播
+  .swiper-container {
+    position: absolute;
+    top:600px;
+    width:348px;
+    height: 216px;
+  }
+
+}
+
+.evt-footer{
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+
+  .footer-bd{
+    position: relative;
+    width:1000px;
+    margin:0 auto;
+  }
+
+  .evt-rules{
+    padding-left:138px;
+    padding-top:30px;
+    color:#907e59;
+    h2{
+      font-size:18px;
+      margin-bottom: 5px;
+    }
+    p{
+      font-size:16px;
+      line-height: 1.5;
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+    }
+  }
+}
